@@ -8,8 +8,9 @@ USER root
 
 COPY writing writing
 RUN cd datasets && wget https://s3.amazonaws.com/img-datasets/mnist.npz
-RUN cd writing/models && wget https://boyuai.oss-cn-shanghai.aliyuncs.com/disk/playground/models/writing/knn.joblib
-RUN cd writing/models && wget https://boyuai.oss-cn-shanghai.aliyuncs.com/disk/playground/models/writing/activation.h5
+RUN cd writing/models && \
+    wget https://boyuai.oss-cn-shanghai.aliyuncs.com/disk/playground/models/writing/knn.joblib && \
+    wget https://boyuai.oss-cn-shanghai.aliyuncs.com/disk/playground/models/writing/activation.h5
 
 COPY text text
 RUN cd datasets && \
