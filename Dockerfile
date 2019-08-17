@@ -27,5 +27,9 @@ COPY style style
 RUN cd style/models && \
     wget https://boyuai.oss-cn-shanghai.aliyuncs.com/disk/playground/models/style/Monet-GA.h5 && \
     wget https://boyuai.oss-cn-shanghai.aliyuncs.com/disk/playground/models/style/VanGogh-GA.h5 && \
-    wget https://boyuai.oss-cn-shanghai.aliyuncs.com/disk/playground/models/style/knn.joblib && \
+    wget https://boyuai.oss-cn-shanghai.aliyuncs.com/disk/playground/models/style/knn-monet.joblib && \
+    wget https://boyuai.oss-cn-shanghai.aliyuncs.com/disk/playground/models/style/knn-vangogh.joblib && \
+    wget https://boyuai.oss-cn-shanghai.aliyuncs.com/disk/playground/models/style/knn-skrik.joblib && \
+    wget https://boyuai.oss-cn-shanghai.aliyuncs.com/disk/playground/models/style/knn-nude.joblib && \
+    wget https://boyuai.oss-cn-shanghai.aliyuncs.com/disk/playground/models/style/knn-composition.joblib && \
     wget https://boyuai.oss-cn-shanghai.aliyuncs.com/disk/playground/models/style/vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5
