@@ -1,13 +1,13 @@
-FROM jupyter/scipy-notebook
-
-RUN pip install numpy scikit-image sklearn pillow matplotlib tensorflow==1.14.0 keras==2.2.4 jieba
-
-RUN mkdir datasets
+FROM jupyter/minimal-notebook
 
 USER root
 
+RUN pip install -i https://mirrors.aliyun.com/pypi/simple numpy==1.16.* scipy==1.3.* scikit-image==0.15.* scikit-learn==0.21.* pillow matplotlib==3.1.* tensorflow==1.14.0 keras==2.2.4 jieba==0.39
+
+RUN mkdir datasets
+
 COPY writing writing
-RUN cd datasets && wget https://s3.amazonaws.com/img-datasets/mnist.npz
+RUN cd datasets && wget https://boyuai.oss-cn-shanghai.aliyuncs.com/disk/playground/data/writing/mnist.npz
 RUN cd writing/models && \
     wget https://boyuai.oss-cn-shanghai.aliyuncs.com/disk/playground/models/writing/knn.joblib && \
     wget https://boyuai.oss-cn-shanghai.aliyuncs.com/disk/playground/models/writing/activation.h5
