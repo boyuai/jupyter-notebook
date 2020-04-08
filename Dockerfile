@@ -14,3 +14,6 @@ RUN pip install -i https://mirrors.aliyun.com/pypi/simple \
     jieba==0.42.* \
     pandas==1.0.* \
     https://boyuai.oss-cn-shanghai.aliyuncs.com/disk/jupyterhub/misc/en_core_web_sm-2.2.5.tar.gz
+
+RUN pip install ipyturtle
+RUN jupyter nbextension enable --py --sys-prefix ipyturtle
