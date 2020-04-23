@@ -17,3 +17,4 @@ RUN pip install -i https://mirrors.aliyun.com/pypi/simple \
 
 RUN pip install ipyturtle
 RUN jupyter nbextension enable --py --sys-prefix ipyturtle
+RUN pip install ipyaliplayer && jupyter nbextension enable --py --sys-prefix ipyaliplayer
