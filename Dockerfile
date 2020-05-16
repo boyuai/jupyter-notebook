@@ -15,6 +15,13 @@ RUN pip install -i https://mirrors.aliyun.com/pypi/simple \
     pandas==1.0.* \
     https://boyuai.oss-cn-shanghai.aliyuncs.com/disk/jupyterhub/misc/en_core_web_sm-2.2.5.tar.gz
 
+# dlib
+RUN pip install -i https://mirrors.aliyun.com/pypi/simple \
+    cmake==3.17.2 \
+    boost==0.1 \
+    dlib==19.19.0 \
+    opencv-python==4.2.0.34
+
 RUN pip install ipyturtle
 RUN jupyter nbextension enable --py --sys-prefix ipyturtle
 RUN pip install ipyaliplayer==0.2.0 && jupyter nbextension enable --py --sys-prefix ipyaliplayer
