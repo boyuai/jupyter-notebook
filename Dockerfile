@@ -1,4 +1,4 @@
-FROM jupyter/minimal-notebook
+FROM jupyter/minimal-notebook:414b5d749704
 
 RUN pip install -i https://mirrors.aliyun.com/pypi/simple \
     spacy==2.2.3 \
