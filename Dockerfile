@@ -10,7 +10,7 @@ RUN pip install -i https://mirrors.aliyun.com/pypi/simple \
     scikit-image==0.16.* \
     scikit-learn==0.22.* \
     pillow==7.1.* \
-    matplotlib==3.2.* \
+    matplotlib==3.2.2 \
     jieba==0.42.* \
     pandas==1.0.* \
     https://boyuai.oss-cn-shanghai.aliyuncs.com/disk/jupyterhub/misc/en_core_web_sm-2.2.5.tar.gz
@@ -22,8 +22,11 @@ RUN pip install -i https://mirrors.aliyun.com/pypi/simple \
     dlib==19.19.0 \
     opencv-python==4.2.0.34
 
-RUN pip install ipyturtle
-RUN jupyter nbextension enable --py --sys-prefix ipyturtle
-RUN pip install ipyaliplayer==0.2.0 && jupyter nbextension enable --py --sys-prefix ipyaliplayer
-RUN pip install ipyquiz==0.4.6 && jupyter nbextension enable --py --sys-prefix ipyquiz
-RUN pip install ipyturtle2==0.3.0 && jupyter nbextension enable --py --sys-prefix ipyturtle2
+RUN pip install ipyturtle && jupyter nbextension enable --py --sys-prefix ipyturtle && \
+    pip install ipyaliplayer==0.2.0 && jupyter nbextension enable --py --sys-prefix ipyaliplayer && \
+    pip install ipyquiz==0.4.6 && jupyter nbextension enable --py --sys-prefix ipyquiz && \
+    pip install ipyturtle2==0.3.0 && jupyter nbextension enable --py --sys-prefix ipyturtle2
+
+# matplotlib chinese v3.2.2
+RUN wget -O /opt/conda/lib/python3.7/site-packages/matplotlib/mpl-data/matplotlibrc https://boyuai.oss-cn-shanghai.aliyuncs.com/disk/jupyterhub/misc/matplotlibrc && \
+    wget -O /opt/conda/lib/python3.7/site-packages/matplotlib/mpl-data/fonts/ttf/SimHei.ttf https://boyuai.oss-cn-shanghai.aliyuncs.com/disk/jupyterhub/misc/SimHei.ttf
