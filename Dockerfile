@@ -13,7 +13,7 @@ RUN pip install -i https://mirrors.aliyun.com/pypi/simple \
     matplotlib==3.2.2 \
     jieba==0.42.* \
     pandas==1.0.* \
-    https://boyuai.oss-cn-shanghai.aliyuncs.com/disk/jupyterhub/misc/en_core_web_sm-2.2.5.tar.gz
+    https://opendl.boyuai.com/jupyter-deps/en_core_web_sm-2.2.5.tar.gz
 
 # dlib
 RUN pip install -i https://mirrors.aliyun.com/pypi/simple \
@@ -28,5 +28,5 @@ RUN pip install ipyturtle && jupyter nbextension enable --py --sys-prefix ipytur
     pip install ipyturtle2==0.3.0 && jupyter nbextension enable --py --sys-prefix ipyturtle2
 
 # matplotlib chinese v3.2.2
-RUN wget -O /opt/conda/lib/python3.7/site-packages/matplotlib/mpl-data/matplotlibrc https://boyuai.oss-cn-shanghai.aliyuncs.com/disk/jupyterhub/misc/matplotlibrc && \
-    wget -O /opt/conda/lib/python3.7/site-packages/matplotlib/mpl-data/fonts/ttf/SimHei.ttf https://boyuai.oss-cn-shanghai.aliyuncs.com/disk/jupyterhub/misc/SimHei.ttf
+RUN wget -O /opt/conda/lib/python3.7/site-packages/matplotlib/mpl-data/matplotlibrc https://opendl.boyuai.com/jupyter-deps/matplotlibrc && \
+    wget -O /opt/conda/lib/python3.7/site-packages/matplotlib/mpl-data/fonts/ttf/SimHei.ttf https://opendl.boyuai.com/jupyter-deps/SimHei.ttf
