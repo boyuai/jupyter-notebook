@@ -23,7 +23,7 @@ RUN pip install -i https://mirrors.aliyun.com/pypi/simple \
     opencv-python==4.2.0.34
 
 RUN pip install ipyturtle && jupyter nbextension enable --py --sys-prefix ipyturtle && \
-    pip install ipyaliplayer==0.2.0 && jupyter nbextension enable --py --sys-prefix ipyaliplayer && \
+    pip install ipyaliplayer==0.2.1 && jupyter nbextension enable --py --sys-prefix ipyaliplayer && \
     pip install ipyquiz==0.4.6 && jupyter nbextension enable --py --sys-prefix ipyquiz && \
     pip install ipyturtle2==0.3.0 && jupyter nbextension enable --py --sys-prefix ipyturtle2
 
