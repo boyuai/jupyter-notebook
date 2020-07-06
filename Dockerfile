@@ -13,6 +13,7 @@ RUN pip install -i https://mirrors.aliyun.com/pypi/simple \
     matplotlib==3.2.2 \
     jieba==0.42.* \
     pandas==1.0.* \
+    xlrd==1.2.0 \
     https://opendl.boyuai.com/jupyter-deps/en_core_web_sm-2.2.5.tar.gz
 
 # dlib
