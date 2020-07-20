@@ -31,4 +31,5 @@ RUN wget -O /opt/conda/lib/python3.7/site-packages/matplotlib/mpl-data/matplotli
 RUN pip install ipyturtle && jupyter nbextension enable --py --sys-prefix ipyturtle && \
     pip install ipyaliplayer==0.3.0 && jupyter nbextension enable --py --sys-prefix ipyaliplayer && \
     pip install ipyquiz==0.4.6 && jupyter nbextension enable --py --sys-prefix ipyquiz && \
-    pip install ipyturtle2==0.3.0 && jupyter nbextension enable --py --sys-prefix ipyturtle2
+    pip install ipyturtle2==0.3.0 && jupyter nbextension enable --py --sys-prefix ipyturtle2 && \
+    pip install ipympl==0.5.7 && jupyter nbextension enable --py --sys-prefix ipympl
