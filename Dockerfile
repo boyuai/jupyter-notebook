@@ -14,6 +14,7 @@ RUN pip install -i https://mirrors.aliyun.com/pypi/simple \
     jieba==0.42.* \
     pandas==1.0.* \
     xlrd==1.2.0 \
+    pkuseg==0.0.25 \
     https://opendl.boyuai.com/jupyter-deps/en_core_web_sm-2.3.0.tar.gz \
     https://opendl.boyuai.com/jupyter-deps/zh_core_web_sm-2.3.0.tar.gz
 
