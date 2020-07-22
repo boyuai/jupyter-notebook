@@ -1,7 +1,7 @@
 FROM jupyter/minimal-notebook:414b5d749704
 
 RUN pip install -i https://mirrors.aliyun.com/pypi/simple \
-    spacy==2.2.3 \
+    spacy==2.3.0 \
     tqdm==4.42.0 \
     numpy==1.18.1 \
     scipy==1.4.1 \
@@ -14,7 +14,8 @@ RUN pip install -i https://mirrors.aliyun.com/pypi/simple \
     jieba==0.42.* \
     pandas==1.0.* \
     xlrd==1.2.0 \
-    https://opendl.boyuai.com/jupyter-deps/en_core_web_sm-2.2.5.tar.gz
+    https://opendl.boyuai.com/jupyter-deps/en_core_web_sm-2.3.0.tar.gz \
+    https://opendl.boyuai.com/jupyter-deps/zh_core_web_sm-2.3.0.tar.gz
 
 # dlib
 RUN pip install -i https://mirrors.aliyun.com/pypi/simple \
