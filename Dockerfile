@@ -29,6 +29,10 @@ RUN pip install -i https://mirrors.aliyun.com/pypi/simple \
 RUN wget -O /opt/conda/lib/python3.7/site-packages/matplotlib/mpl-data/matplotlibrc https://opendl.boyuai.com/jupyter-deps/matplotlibrc && \
     wget -O /opt/conda/lib/python3.7/site-packages/matplotlib/mpl-data/fonts/ttf/SimHei.ttf https://opendl.boyuai.com/jupyter-deps/SimHei.ttf
 
+# new libraries 20200825
+RUN pip install -i https://mirrors.aliyun.com/pypi/simple \
+    wordcloud==1.8.0
+    
 # 这几个插件经常变动，因此放在结尾
 RUN pip install ipyturtle && jupyter nbextension enable --py --sys-prefix ipyturtle && \
     pip install ipyaliplayer==0.4.1 && jupyter nbextension enable --py --sys-prefix ipyaliplayer && \
