@@ -31,7 +31,9 @@ RUN wget -O /opt/conda/lib/python3.7/site-packages/matplotlib/mpl-data/matplotli
 
 # new libraries 20200825
 RUN pip install -i https://mirrors.aliyun.com/pypi/simple \
-    wordcloud==1.8.0
+    wordcloud==1.8.0 \
+    docx-mailmerge==0.5.0 \
+    python-docx 0.8.7
     
 # 这几个插件经常变动，因此放在结尾
 RUN pip install ipyturtle && jupyter nbextension enable --py --sys-prefix ipyturtle
