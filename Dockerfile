@@ -33,7 +33,8 @@ RUN wget -O /opt/conda/lib/python3.7/site-packages/matplotlib/mpl-data/matplotli
 RUN pip install -i https://mirrors.aliyun.com/pypi/simple \
     wordcloud==1.8.0 \
     docx-mailmerge==0.5.0 \
-    python-docx==0.8.7
+    python-docx==0.8.7 \
+    openpyxl==3.0.5
     
 # 这几个插件经常变动，因此放在结尾
 RUN pip install ipyturtle && jupyter nbextension enable --py --sys-prefix ipyturtle
