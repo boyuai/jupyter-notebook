@@ -35,6 +35,9 @@ RUN pip install -i https://mirrors.aliyun.com/pypi/simple \
     docx-mailmerge==0.5.0 \
     python-docx==0.8.7 \
     openpyxl==3.0.5
+
+# new libraries 20201027
+RUN pip install matplotlib-venn==0.11.6
     
 # 这几个插件经常变动，因此放在结尾
 RUN pip install ipyturtle && jupyter nbextension enable --py --sys-prefix ipyturtle
