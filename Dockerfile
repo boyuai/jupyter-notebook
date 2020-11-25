@@ -38,6 +38,11 @@ RUN pip install -i https://mirrors.aliyun.com/pypi/simple \
 
 # new libraries 20201027
 RUN pip install matplotlib-venn==0.11.6
+
+# new libraries 20201125
+RUN pip install -i https://mirrors.aliyun.com/pypi/simple \
+    seaborn==0.11.0 \
+    pyecharts==1.0.0
     
 # 这几个插件经常变动，因此放在结尾
 RUN pip install ipyturtle && jupyter nbextension enable --py --sys-prefix ipyturtle
