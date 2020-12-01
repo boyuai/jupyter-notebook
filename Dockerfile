@@ -43,6 +43,10 @@ RUN pip install matplotlib-venn==0.11.6
 RUN pip install -i https://mirrors.aliyun.com/pypi/simple \
     seaborn==0.11.0 \
     pyecharts==1.0.0
+
+# seaborn dataset
+RUN wget -O /tmp/seaborn-data.zip https://opendl.boyuai.com/jupyter-deps/seaborn-data.zip && \
+    unzip -d ~/ /tmp/seaborn-data.zip
     
 # 这几个插件经常变动，因此放在结尾
 RUN pip install ipyturtle && jupyter nbextension enable --py --sys-prefix ipyturtle
