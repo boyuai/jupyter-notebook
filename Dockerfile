@@ -44,6 +44,10 @@ RUN pip install -i https://mirrors.aliyun.com/pypi/simple \
     seaborn==0.11.0 \
     pyecharts==1.0.0
 
+# new libraries 20201209
+RUN pip install -i https://mirrors.aliyun.com/pypi/simple \
+    xlwt==1.3.0
+
 # seaborn dataset
 RUN wget -O /tmp/seaborn-data.zip https://opendl.boyuai.com/jupyter-deps/seaborn-data.zip && \
     unzip -d ~/ /tmp/seaborn-data.zip
