@@ -4,4 +4,4 @@ RUN conda install -y xwidgets -c conda-forge
 
 RUN pip install ipyaliplayer==0.4.1 && jupyter nbextension enable --py --sys-prefix ipyaliplayer
 RUN pip install ipyquiz==0.5.2 && jupyter nbextension enable --py --sys-prefix ipyquiz
-RUN pip install ipybbycell==0.0.7
+RUN pip install ipybbycell==0.0.8
