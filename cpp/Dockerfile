@@ -1,4 +1,11 @@
 FROM jupyter/minimal-notebook:414b5d749704
+
+# 新增一个用户组editors用于编辑挂载的共享目录
+USER root
+RUN groupadd --gid 1200 editors
+RUN useradd -ms /bin/sh -g 1200 editor
+USER jovyan
+
 RUN conda install -y xeus-cling -c conda-forge
 RUN conda install -y xwidgets -c conda-forge
 
