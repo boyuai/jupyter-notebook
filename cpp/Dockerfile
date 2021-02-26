@@ -9,9 +9,9 @@ USER jovyan
 RUN conda install -y xeus-cling -c conda-forge
 RUN conda install -y xwidgets -c conda-forge
 
-RUN pip install -i https://mirrors.aliyun.com/pypi/simple jupyter_contrib_nbextensions && \
+RUN pip install jupyter_contrib_nbextensions && \
 jupyter contrib nbextension install --sys-prefix
-RUN pip install -i https://mirrors.aliyun.com/pypi/simple jupyter_nbextensions_configurator && \
+RUN pip install jupyter_nbextensions_configurator && \
 jupyter nbextensions_configurator enable  --sys-prefix
 RUN jupyter nbextension enable --sys-prefix toc2/main
 COPY ./notebook.json /home/jovyan/.jupyter/nbconfig/notebook.json
