@@ -17,5 +17,5 @@ RUN jupyter nbextension enable --sys-prefix toc2/main
 COPY ./notebook.json /home/jovyan/.jupyter/nbconfig/notebook.json
 
 RUN pip install ipyaliplayer==0.4.1 && jupyter nbextension enable --py --sys-prefix ipyaliplayer
-RUN pip install ipyquiz==0.5.2 && jupyter nbextension enable --py --sys-prefix ipyquiz
+RUN pip install ipyquiz==0.5.5 && jupyter nbextension enable --py --sys-prefix ipyquiz
 RUN pip install ipybbycell==0.0.12

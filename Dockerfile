@@ -68,7 +68,7 @@ COPY ./notebook.json /home/jovyan/.jupyter/nbconfig/notebook.json
 # 这几个插件经常变动，因此放在结尾
 RUN pip install ipyturtle && jupyter nbextension enable --py --sys-prefix ipyturtle
 RUN pip install ipyaliplayer==0.4.1 && jupyter nbextension enable --py --sys-prefix ipyaliplayer
-RUN pip install ipyquiz==0.5.4 && jupyter nbextension enable --py --sys-prefix ipyquiz
+RUN pip install ipyquiz==0.5.5 && jupyter nbextension enable --py --sys-prefix ipyquiz
 RUN pip install ipyturtle2==0.7.4 && jupyter nbextension enable --py --sys-prefix ipyturtle2
 RUN pip install ipympl==0.5.7 && jupyter nbextension enable --py --sys-prefix ipympl
 RUN pip install ipybbycell==0.0.12
