@@ -1,0 +1,33 @@
+name: Build Images
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: login ghcr
+        run: echo ${{ secrets.GHCR_TOKEN }} | docker login -u boyuai ghcr.io --password-stdin
+      - name: build
+        run: |
+          docker build -t ghcr.io/boyuai/notebook .
+      - name: push
+        run: |
+          docker push ghcr.io/boyuai/notebook
+  build-cpp:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: login ghcr
+        run: echo ${{ secrets.GHCR_TOKEN }} | docker login -u boyuai ghcr.io --password-stdin
+      - name: build
+        run: |
+          cd cpp
+          docker build -t ghcr.io/boyuai/notebook-cpp .
+      - name: push
+        run: |
+          docker push ghcr.io/boyuai/notebook-cpp
