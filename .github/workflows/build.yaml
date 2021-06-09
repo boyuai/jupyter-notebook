@@ -10,8 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: login ghcr
-        run: echo ${{ secrets.GHCR_TOKEN }} | docker login -u boyuai ghcr.io --password-stdin
+      - uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
       - name: build
         run: |
           docker build -t ghcr.io/boyuai/notebook .
@@ -22,8 +25,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: login ghcr
-        run: echo ${{ secrets.GHCR_TOKEN }} | docker login -u boyuai ghcr.io --password-stdin
+      - uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
       - name: build
         run: |
           cd cpp
