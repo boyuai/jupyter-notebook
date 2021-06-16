@@ -14,7 +14,7 @@ RUN pip install \
     tensorflow==2.1.0 \
     Keras==2.3.1 \
     scikit-image==0.16.* \
-    scikit-learn==0.22.* \
+    scikit-learn==0.23.* \
     pillow==7.1.* \
     matplotlib==3.2.2 \
     jieba==0.42.* \
