@@ -57,11 +57,11 @@ RUN pip install \
 # seaborn dataset
 RUN wget -O /tmp/seaborn-data.zip https://opendl.boyuai.com/jupyter-deps/seaborn-data.zip && \
     unzip -d ~/ /tmp/seaborn-data.zip
-    
+
 RUN pip install jupyter_contrib_nbextensions && \
-jupyter contrib nbextension install --sys-prefix
+    jupyter contrib nbextension install --sys-prefix
 RUN pip install jupyter_nbextensions_configurator && \
-jupyter nbextensions_configurator enable  --sys-prefix
+    jupyter nbextensions_configurator enable  --sys-prefix
 RUN jupyter nbextension enable --sys-prefix toc2/main
 COPY ./notebook.json /home/jovyan/.jupyter/nbconfig/notebook.json
 
@@ -71,4 +71,4 @@ RUN pip install ipyaliplayer==0.4.1 && jupyter nbextension enable --py --sys-pre
 RUN pip install ipyquiz==0.5.5 && jupyter nbextension enable --py --sys-prefix ipyquiz
 RUN pip install ipyturtle2==0.7.4 && jupyter nbextension enable --py --sys-prefix ipyturtle2
 RUN pip install ipympl==0.5.7 && jupyter nbextension enable --py --sys-prefix ipympl
-RUN pip install ipybbycell==0.0.12
+RUN pip install ipybbycell==0.1.0 && jupyter nbextension enable --py --sys-prefix ipybbycell
