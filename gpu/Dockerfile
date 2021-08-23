@@ -1,5 +1,5 @@
 FROM boyuai/gpu-jupyter
-RUN pip install -i https://mirrors.aliyun.com/pypi/simple \
+RUN pip install \
     spacy==2.2.3 \
     tqdm==4.42.0 \
     numpy==1.18.1 \
