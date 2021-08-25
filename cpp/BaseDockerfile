@@ -15,4 +15,3 @@ RUN pip install jupyter_nbextensions_configurator && \
   jupyter nbextensions_configurator enable  --sys-prefix
 RUN jupyter nbextension enable --sys-prefix toc2/main
 COPY ./notebook.json /home/jovyan/.jupyter/nbconfig/notebook.json
-

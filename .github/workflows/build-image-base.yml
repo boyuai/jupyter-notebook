@@ -17,8 +17,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: build
         run: |
-          docker build -t ghcr.io/boyuai/notebook-base .
-        working-directory: ./base
+          docker build -t ghcr.io/boyuai/notebook-base -f BaseDockerfile .
       - name: push
         run: |
           docker push ghcr.io/boyuai/notebook-base
@@ -33,8 +32,8 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: build
         run: |
-          docker build -t ghcr.io/boyuai/notebook-base-cpp -f DockerfileCpp .
-        working-directory: ./base
+          docker build -t ghcr.io/boyuai/notebook-base-cpp -f BaseDockerfile .
+        working-directory: ./cpp
       - name: push
         run: |
           docker push ghcr.io/boyuai/notebook-base-cpp
