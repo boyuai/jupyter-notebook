@@ -1,4 +1,3 @@
-docker build -t 527345677879.dkr.ecr.cn-northwest-1.amazonaws.com.cn/notebook-cpp .
-# aws ecr get-login-password --region cn-northwest-1 | docker login --username AWS --password-stdin 527345677879.dkr.ecr.cn-northwest-1.amazonaws.com.cn
-# docker login -u AWS -p $(aws ecr get-login-password --region cn-northwest-1) 527345677879.dkr.ecr.cn-northwest-1.amazonaws.com.cn
-docker push 527345677879.dkr.ecr.cn-northwest-1.amazonaws.com.cn/notebook-cpp
+echo "2p96pVBS6bjUeu3q9kls3desc56" | docker login --username=上海伯禹教育科技有限公司 registry.cn-shanghai.aliyuncs.com --password-stdin
+docker build -t registry.cn-shanghai.aliyuncs.com/boyu/notebook-cpp .
+docker push registry.cn-shanghai.aliyuncs.com/boyu/notebook-cpp
