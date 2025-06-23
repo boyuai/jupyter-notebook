@@ -9,7 +9,7 @@ RUN pip install \
 
 # 人工智能训练师素材
 RUN wget -O /tmp/learn-ai-assets.zip https://opendl.boyuai.com/jupyter-deps/learn-ai-assets.zip && \
-    unzip -d ~/ /home/jovyan/learn-ai-assets.zip
+    unzip -d ~/ /tmp/learn-ai-assets.zip
 
 RUN pip install ipyturtle && jupyter nbextension enable --py --sys-prefix ipyturtle
 RUN pip install ipyaliplayer==0.4.1 && jupyter nbextension enable --py --sys-prefix ipyaliplayer
